@@ -1,0 +1,70 @@
+@import url("./reset.css");
+@import url("./variables.css");
+
+/* Batman/product spesific page */
+.batman {
+    display: flex;
+    flex-direction: column;
+    margin: 16px auto;
+    justify-content: center;
+}
+  
+.batman__image {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.batman__image--big {
+    max-height: 400px;
+    max-width: 264px;
+    margin-bottom: 16px;
+}
+  
+.batman__text {
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    min-width: 264px;
+    max-width: 95%;
+    margin: 0 auto;
+    color:#000276;
+}
+
+.batman__text__price {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+  
+.go-back-batman {
+    display: flex;
+    justify-content: center;
+    margin: 16px auto;
+}
+
+@media (min-width: 720px) {
+    .batman {
+        display: flex;
+        flex-direction: row;
+        margin: 16px auto;
+        background-color: #EBE5FC;
+        border-radius: 20px;
+        padding: 16px;
+        max-width: 1000px;
+    }
+
+    .batman__image {
+        margin: 30px 8px auto 8px;
+    }
+
+    .batman__text {
+        margin: 0px 8px;
+    }
+
+    .batman__text__price {
+        align-self: center;
+        margin-top: auto;
+    }
+}

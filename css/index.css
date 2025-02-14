@@ -1,0 +1,59 @@
+@import url("./reset.css");
+@import url("./variables.css");
+
+/* Homepage */
+.logo__image {
+    width: 100%;
+    object-fit: fill;
+    object-position: center;
+    margin: 16px 0px;
+}
+  
+.welcome{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+  
+.topthree {
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+}
+
+.topthree__imagelist {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+}
+
+.topthree__imagelist p {
+    background-color: #EBE5FC;
+    color: #000276;
+    font-weight: bold;
+}
+  
+.topthree__imagelist__images {
+    height: 352px;
+    width: 222px;
+}
+
+@media (min-width: 750px) {
+    .logo__image {
+      max-width: 720px;
+      object-position: center;
+      margin: 16px auto;
+    }
+  
+    .topthree {
+      background-color: #EBE5FC;
+      padding: 16px;
+    }
+  
+    .topthree__imagelist {
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      grid-template-rows: auto;
+      gap: 4px;
+    }
+}

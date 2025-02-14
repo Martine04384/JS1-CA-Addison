@@ -1,0 +1,42 @@
+@import url("./reset.css");
+@import url("./variables.css");
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    width: 80%;
+    margin: 16px auto;
+    background-color: #EBE5FC;
+    color: #000276;
+    border: 0.25rem solid #000276;
+    border-radius: 20px;
+}
+
+h1 {
+    background-color: #EBE5FC;
+    color: #000276;
+}
+
+.symbol {
+    color: #EBE5FC;
+    background-color: #000276;
+    padding: 32px;
+    margin: 0;
+    border-radius: 50%;
+    font-size: 4rem;
+}
+
+.order-summary {
+    margin: 20px auto;
+}
+
+@media (min-width: 720px) {
+    main {
+        padding: 40px;
+        max-width: 1000px;
+    }
+}

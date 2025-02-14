@@ -1,0 +1,178 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  margin: 0;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+main {
+  max-width: 1000px;
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* Text */
+h1, h2, h3, h4 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  text-align: center;
+  font-weight:bold;
+}
+
+h1 {
+  background-color: #000276;
+  color: #EBE5FC;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.75rem;
+  background-color: #EBE5FC;
+  color: #000276;
+}
+
+h3 {
+  font-size: 1.5rem;
+  background-color: #EBE5FC;
+  color: #000276;
+}
+
+p {
+  font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif;
+  font-size: 1rem;
+  color: #000276;
+}
+
+/* Navigation */
+nav,
+#menue-checkbox {
+  display: none;
+}
+
+.hamburger-icon {
+  display: block;
+}
+
+#menue-checkbox:checked ~ nav {
+  display: block
+}
+
+header {
+  color: #EBE5FC;
+  background-color: #000276;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: right;
+  padding: 0px 20px;
+}
+
+nav {
+  position: absolute;
+  background-color: #000276;
+  color: #efe5fc;
+  right: 0px;
+  margin-top: 39px;
+  z-index: 100;
+}
+  
+nav a {
+  display: block;
+  text-decoration: none;
+  color: #efe5fc;
+  padding: 10px 20px;
+  font-size: 1rem;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Nav on different screens */
+@media (max-width: 719px) {
+  .nav-bar-logo {
+    display: none;
+  }
+}
+
+@media (min-width: 720px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  nav {
+    display: block;
+    position: static;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 0 0 0 20px;
+  }
+
+  .nav-bar-logo {
+    padding: 0px;
+  }
+}
+
+/* CTA buttons*/
+
+.cta__button {
+  background-color: #000276;
+  color: #EBE5FC;
+  border-radius: 20cap;
+  padding: 4px 24px;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  margin: 16px auto;
+}
+
+.cta__button:hover {
+  background-color: #EBE5FC;
+  color: #000276;
+}
+
+@media (min-width: 720px) {
+  .cta__button {
+    padding: 10px 24px;
+  }
+}
+
+/* Forms */
+.form__input {
+  display: block;
+}
+
+/* footer */
+
+footer {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: #EBE5FC;
+  background-color: #000276;
+  width: 100%;
+  text-align: center;
+  padding: 16px;
+}
+
+footer a {
+  color:#EBE5FC;
+  text-decoration: none;
+}
+
+footer p {
+  color:#EBE5FC;
+}
