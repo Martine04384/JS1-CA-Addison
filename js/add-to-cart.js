@@ -19,7 +19,7 @@ export function saveCart() {
   }
 }
 
-export function addToCart(id, title, price) {
+export function addToCart(id = "unknown", title = "No title", price = 0) {
   try {
     const item = { id, title, price };
     cart.push(item);
