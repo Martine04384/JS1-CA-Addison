@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Square Eyes</title>
+    <title>The Batman, Square Eyes</title>
     <meta charset="UTF-8">
-    <meta name="description"
-        Content="Square eyes an online video cinema made to connect film lovers with high-quality online movies.">
+    <meta name="description" Content="Square eyes movies details.">
     <meta name="viewport" Content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/product-spesific.css">
     <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/favicon.ico">
     <script src="https://kit.fontawesome.com/87671af21f.js" crossorigin="anonymous"></script>
 </head>
@@ -17,8 +16,8 @@
         <a href="index.html"><img src="assets/square-eyes-navbar.png"
                 alt="Logo for Square Eyes webpage with the name Square Eyes and a pair of 3D glasses on top of the name"
                 class="nav-bar-logo"></a>
-        <label for="menue-checkbox" class="hamburger-icon" aria-label="Open navigation mobile"><i
-                class="fas fa-bars fa"></i></label>
+        <label for="menue-checkbox" class="hamburger-icon" aria-label="Open navigation mobile"><i class="fas fa-bars fa"
+                aria-hidden="true"></i></label>
         <input type="checkbox" name="menue-checkbox" id="menue-checkbox">
         <nav>
             <a href="index.html">Home</a>
@@ -27,26 +26,13 @@
             <a href="cart.html">Cart</a>
         </nav>
     </header>
+
     <main>
-        <section class="welcome">
-            <img src="assets/square-eyes-logo.png" alt="Square Eyes logo with caption connecting film lovers"
-                class="logo__image">
-            <div class="welcome-content">
-                <h1>Movie Library</h1>
-            </div>
-        </section>
-        <section class="filter">
-            <label for="filter-genre">Choose a Movie Genre</label>
-            <select id="filter-genre">
-                <option value="">All Genres</option>
-            </select>
-        </section>
-        <section class="topthree">
-            <h2>Movies</h2>
-            <div class="topthree__imagelist">
-            </div>
-        </section>
+        <div class="movie-details"></div>
+        <a href="./index.html" class="cta__button go-back-movie">Go to homepage</a>
+
     </main>
+
     <footer>
         <p>Contact us on:</p>
         <a href="https://www.facebook.com" target="_blank" aria-label="Facebook icon that links to Facebook"
@@ -67,7 +53,7 @@
         </a>
         <p>Copyright &copy;</p>
     </footer>
-    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/product-spesific.js"></script>
 </body>
 
 </html>

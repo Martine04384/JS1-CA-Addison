@@ -8,16 +8,8 @@ main {
 }
 
 .order-summary__details {
-    display: grid;
-    grid-template-rows: 1fr;
-    grid-template-columns: 2fr 2fr 1fr;
-    gap: 16px;
     background-color: #EBE5FC;
     color: #000276;
-}
-
-.order-summary__image {
-    max-width: 160px;
 }
 
 .billing__details, .order-summary__details {

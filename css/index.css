@@ -35,7 +35,7 @@
   
 .image-container {
   width: 100%;       /* Full width of parent */
-  height: 50vh;     /* Fixed height for uniformity */
+  height: 60vh;     /* Fixed height for uniformity */
   overflow: hidden;  /* Hide any overflow */
 }
 
