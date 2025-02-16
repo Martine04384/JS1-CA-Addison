@@ -15,22 +15,21 @@
     text-align: center;
 }
   
-.topthree {
+.movie {
     text-align: center;
     margin-top: 16px;
     margin-bottom: 16px;
 }
 
-.topthree__imagelist {
+.movie__imagelist {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: auto;
 }
 
-.topthree__imagelist p {
+.movie__imagelist p {
     background-color: #EBE5FC;
     color: #000276;
-    font-weight: bold;
 }
   
 .image-container {
@@ -52,15 +51,16 @@
       margin: 16px auto;
     }
   
-    .topthree {
+    .movie {
       background-color: #EBE5FC;
       padding: 16px;
     }
   
-    .topthree__imagelist {
+    .movie__imagelist {
       display: grid;
       grid-template-columns: repeat(3,1fr);
       grid-template-rows: auto;
-      gap: 4px;
+      gap: 16px;
+      margin: 0 auto;
     }
 }

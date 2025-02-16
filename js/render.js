@@ -1,5 +1,5 @@
 export function renderMovies(movies) {
-  const movieList = document.querySelector(".topthree__imagelist");
+  const movieList = document.querySelector(".movie__imagelist");
   movieList.innerHTML = "";
 
   movies.forEach(({ id, title, description, price, image }) => {
