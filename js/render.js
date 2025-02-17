@@ -5,7 +5,8 @@ export function renderMovies(movies) {
   movies.forEach(({ id, title, description, price, image }) => {
     const article = document.createElement("article");
     article.innerHTML = `
-        <div class="image-container">
+        <div class="card">
+        <div class="card-image-container">
             <img src="${image.url}" alt="${title}">
         </div>
         <h3>${title}</h3>
@@ -13,7 +14,8 @@ export function renderMovies(movies) {
         <p>Price: $${price ? price.toFixed(2) : "N/A"}</p>
         <a href="product-spesific.html?id=${id}">Read more</a>
         <button class="add-to-cart" data-id="${id}" data-title="${title}" data-price="${price}">Add to Cart</button>
-    `;
+        </div>    
+        `;
     movieList.appendChild(article);
   });
 }

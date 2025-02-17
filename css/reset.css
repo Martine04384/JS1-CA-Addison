@@ -86,11 +86,19 @@ nav a {
   text-decoration: none;
   color: #efe5fc;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 1.5rem;
 }
 
 nav a:hover {
-  text-decoration: underline;
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.nav-active {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4);
 }
 
 /* Nav on different screens */
@@ -118,7 +126,7 @@ nav a:hover {
 
   nav a {
     display: inline-block;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 0px;
   }
 
   .nav-bar-logo {

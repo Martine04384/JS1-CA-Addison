@@ -7,21 +7,18 @@ main {
     min-width: 350px;
 }
 
-.order-summary__details {
-    background-color: #EBE5FC;
-    color: #000276;
+.order-summary__details div {
+    display: flex;
+    flex-direction: row;
 }
 
 .billing__details, .order-summary__details {
+    background-color: #EBE5FC;
+    color: #000276;
     box-sizing: border-box;
     text-align: left;
     padding: 16px;
     margin: 16px auto;
-}
-
-.billing__details {
-    color: #000276;
-    background-color: #EBE5FC;
 }
 
 fieldset div{
