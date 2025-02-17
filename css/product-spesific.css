@@ -7,18 +7,27 @@
     flex-direction: column;
     margin: 16px auto;
     justify-content: center;
+    align-items: center;
+    background-color: var(--color-secondary);
+    border-radius: 20px;
+    padding: 16px;
+    max-width: 1000px;
+    box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4);
 }
   
 .image-container {
-    width: 100%;       /* Full width of parent */
-    height: 80vh;     /* Fixed height for uniformity */
-    overflow: hidden;  /* Hide any overflow */
+    width: 80%;
+    height: 80%;
+    min-width: 300px;       
+    min-height: 450px;     
+    overflow: hidden; 
 }
 
 .image-container img {
     width: 100%;
     height: 100%;
-    object-fit: cover;  /* Fill container, crop to fit */
+    object-fit: cover;
+    border-radius: 20px;
 }
   
 .movie-text {
@@ -26,30 +35,41 @@
     flex-direction: column;
     box-sizing: border-box;
     min-width: 264px;
-    max-width: 95%;
+    max-width: 80%;
     margin: 0 auto;
-    color:#000276;
+    color: var(--color-primary);
 }
 
- .movie-text-price {
-        display: flex;
-        justify-content: center;
-    }
-
-.go-back-movie {
+.movie-text-price {
     display: flex;
     justify-content: center;
 }
 
-@media (min-width: 720px) {
+.go-back-movie {
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border-radius: 20cap;
+    padding: 4px 24px;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin: 16px auto;
+}
+
+.go-back-movie:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+}
+
+@media (min-width: 1024px) {
     .movie-card {
         display: flex;
         flex-direction: row;
         margin: 16px auto;
-        background-color: #EBE5FC;
-        border-radius: 20px;
-        padding: 16px;
-        max-width: 1000px;
     }
 
     .movie-text p {
@@ -59,5 +79,10 @@
     .movie-text-price {
         display: flex;
         justify-content: center;
+    }
+
+    .image-container {
+        width: 100%;       
+        height: 100%;     
     }
 }

@@ -8,19 +8,11 @@ document.addEventListener("DOMContentLoaded", () => {
       // Check if order is empty
       const emptyMessage = document.createElement("h2");
       emptyMessage.textContent = "Your cart is empty.";
-      const homeLink = document.createElement("a");
-      homeLink.href = "index.html";
-      homeLink.textContent = "Return to Home";
       orderContainer.appendChild(emptyMessage);
-      orderContainer.appendChild(homeLink);
       return;
     }
 
     let total = 0; // Initialize total price
-
-    const thankYou = document.createElement("h2");
-    thankYou.textContent = "Thank you for your order!";
-    orderContainer.appendChild(thankYou);
 
     orderSummary.forEach((item) => {
       const itemTitle = document.createElement("p");
@@ -37,6 +29,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const totalContainer = document.createElement("h3");
     totalContainer.textContent = `Total: $${total.toFixed(2)}`;
     orderContainer.appendChild(totalContainer);
+
+    const thankYou = document.createElement("h2");
+    thankYou.textContent = "Thank you for your order!";
+    orderContainer.appendChild(thankYou);
 
     localStorage.removeItem("orderSummary"); // Clear order data from localStorage
   } catch (error) {

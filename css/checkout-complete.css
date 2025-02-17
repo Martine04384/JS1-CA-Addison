@@ -10,28 +10,39 @@ main {
     padding: 20px;
     width: 80%;
     margin: 16px auto;
-    background-color: #EBE5FC;
-    color: #000276;
-    border: 0.25rem solid #000276;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    border: 0.25rem solid var(--color-secondary);
     border-radius: 20px;
 }
 
 h1 {
-    background-color: #EBE5FC;
-    color: #000276;
-}
-
-.symbol {
-    color: #EBE5FC;
-    background-color: #000276;
-    padding: 32px;
-    margin: 0;
-    border-radius: 50%;
-    font-size: 4rem;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 .order-summary {
     margin: 20px auto;
+}
+  
+.go-back {
+    display: flex;
+    justify-content: center;
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border-radius: 20px;
+  padding: 4px 24px;
+  font-size: 1rem;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  margin: 16px auto;
+}
+
+.go-back:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
 }
 
 @media (min-width: 720px) {

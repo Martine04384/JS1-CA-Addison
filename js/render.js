@@ -10,9 +10,8 @@ export function renderMovies(movies) {
             <img src="${image.url}" alt="${title}">
         </div>
         <h3>${title}</h3>
-        <p>${description || "No description available"}</p>
         <p>Price: $${price ? price.toFixed(2) : "N/A"}</p>
-        <a href="product-spesific.html?id=${id}">Read more</a>
+        <a href="product-spesific.html?id=${id}" class="read-more">Read more</a>
         <button class="add-to-cart" data-id="${id}" data-title="${title}" data-price="${price}">Add to Cart</button>
         </div>    
         `;
