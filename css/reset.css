@@ -18,7 +18,7 @@ main {
 
 @media (max-width: 1023px) {
   main {
-    padding-top: 60px; /* Add padding only on smaller screens */
+    padding-top: 60px;
   }
 }
 
@@ -53,100 +53,10 @@ p {
   color: var(--color-primary);
 }
 
-/* Navigation */
-
-/*
-nav,
-#menue-checkbox {
-  display: none;
-}
-
-.hamburger-icon {
-  display: block;
-}
-
-#menue-checkbox:checked ~ nav {
-  display: block
-}
-
-header {
-  color: var(--color-secondary);
-  background-color: var(--color-primary);
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-size: 2rem;
-  position: relative;
-  display: flex;
-  justify-content: right;
-  padding: 0px 20px;
-}
-
-nav {
-  position: absolute;
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
-  right: 0px;
-  margin-top: 39px;
-  z-index: 100;
-}
-  
-nav a {
-  display: block;
-  text-decoration: none;
-  color: var(--color-secondary);
-  padding: 10px 20px;
-  font-size: 1rem;
-}
-
-nav a:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4);
-}
-
-.nav-active {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
-  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4);
-}
-
-/* Nav on different screens */
-/*
-@media (max-width: 719px) {
-  .nav-bar-logo {
-    display: none;
-  }
-}
-
-@media (min-width: 720px) {
-  header {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .hamburger-icon {
-    display: none;
-  }
-
-  nav {
-    display: block;
-    position: static;
-  }
-
-  nav a {
-    display: inline-block;
-    padding: 0;
-  }
-
-  .nav-bar-logo {
-    padding: 0px;
-  }
-}
-*/
-
 /* header */
 .nav-bar-logo {
   height: 60px;
-  width: 100px;
+  width: 120px;
 }
 
 header {
@@ -228,7 +138,7 @@ nav a:hover {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 4px;
+    padding: 0 16px;
   }
 
   .hamburger-icon {
@@ -247,9 +157,7 @@ nav a:hover {
   }
 }
 
-
 /* CTA buttons*/
-
 .cta__button {
   background-color: var(--color-primary);
   color: var(--color-secondary);
@@ -299,7 +207,6 @@ nav a:hover {
 }
 
 /* footer */
-
 footer {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: var(--color-secondary);
