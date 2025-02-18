@@ -5,8 +5,8 @@
 body {
   box-sizing: border-box;
   min-height: 100vh;
-  margin: 0;
   display: grid;
+  margin: 0;
   grid-template-rows: auto 1fr auto;
 }
 
@@ -14,6 +14,12 @@ main {
   max-width: 1000px;
   width: 95%;
   margin: 0 auto;
+}
+
+@media (max-width: 1023px) {
+  main {
+    padding-top: 60px; /* Add padding only on smaller screens */
+  }
 }
 
 /* Text */
@@ -48,6 +54,8 @@ p {
 }
 
 /* Navigation */
+
+/*
 nav,
 #menue-checkbox {
   display: none;
@@ -102,6 +110,7 @@ nav a:hover {
 }
 
 /* Nav on different screens */
+/*
 @media (max-width: 719px) {
   .nav-bar-logo {
     display: none;
@@ -133,6 +142,110 @@ nav a:hover {
   }
 }
 */
+
+/* header */
+.nav-bar-logo {
+  height: 60px;
+  width: 100px;
+}
+
+header {
+  background-color: var(--color-primary);
+}
+  
+/* Navigation */
+
+nav,
+#menue-checkbox {
+  display: none;
+}
+
+.hamburger-icon {
+  font-size: 32px;
+  display: block;
+  color: var(--color-secondary);
+  padding: 16px;
+  position: absolute; /* or use flexbox on header */
+  top: 0px;
+  right: 16px; /* Push to the right */
+  cursor: pointer;
+}
+
+#menue-checkbox:checked ~ nav {
+  display: block;
+}
+
+nav {
+  background-color: var(--color-primary); 
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-secondary);
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 1.5rem;
+}
+
+nav a:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+.nav-active {
+  background-color: var(--color-secondary);
+  color: var(--color-primary);
+  box-shadow: 0px 4px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Nav on different screens */
+@media (max-width: 1023px) {
+  header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+  }
+
+  nav {
+    position: absolute;
+    top: 60px; /* Adjust based on header height */
+    left: 0;
+    width: 100%;
+    background-color: var(--color-primary);
+    z-index: 999;
+  }
+    
+  nav a {
+    display: block;
+  }
+}
+
+@media (min-width: 1024px) {
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 4px;
+  }
+
+  .hamburger-icon {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  nav a {
+    display: inline-block;
+    padding: 16px 16px;
+  }
+}
 
 
 /* CTA buttons*/
