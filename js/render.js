@@ -26,7 +26,7 @@ export function renderMovies(movies) {
     const readMoreLink = document.createElement("a");
     readMoreLink.href = `product-spesific.html?id=${id}`;
     readMoreLink.classList.add("read-more");
-    readMoreLink.textContent = "Read more";
+    readMoreLink.textContent = `Read more about ${title}`;
 
     const addToCartButton = document.createElement("button");
     addToCartButton.classList.add("add-to-cart");
