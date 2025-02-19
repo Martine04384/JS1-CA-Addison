@@ -17,7 +17,7 @@ export function renderMovies(movies) {
 
     imageContainer.appendChild(img);
 
-    const movieTitle = document.createElement("h3");
+    const movieTitle = document.createElement("h2");
     movieTitle.textContent = title;
 
     const moviePrice = document.createElement("p");
