@@ -1,26 +1,7 @@
 import { getMovies } from "./api.js";
 import { renderMovies } from "./render.js";
 import { addGenre, activateGenreFilter } from "./filter.js";
-
-let cart = [];
-
-function saveCart() {
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
-
-function loadCart() {
-  const storedCart = localStorage.getItem("cart");
-  if (storedCart) {
-    cart = JSON.parse(storedCart);
-  }
-}
-
-function addToCart(id, title, price) {
-  const item = { id, title, price };
-  cart.push(item); // Add item to the cart array
-  saveCart();
-  alert(`${title} added to cart!`);
-}
+import { addToCart } from "./add-to-cart.js";
 
 async function movies() {
   try {
@@ -42,5 +23,4 @@ async function movies() {
   }
 }
 
-loadCart();
 movies();

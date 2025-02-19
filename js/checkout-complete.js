@@ -37,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
     localStorage.removeItem("orderSummary"); // Clear order data from localStorage
   } catch (error) {
     // Catch any JSON parsing errors
-    console.error("Error loading order summary:", error);
     const errorMessage = document.createElement("h2");
     errorMessage.textContent = "Something went wrong loading your order.";
     orderContainer.appendChild(errorMessage);
