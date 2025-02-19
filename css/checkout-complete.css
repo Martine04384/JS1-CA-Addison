@@ -14,6 +14,7 @@ main {
     color: var(--color-primary);
     border: 0.25rem solid var(--color-secondary);
     border-radius: 20px;
+    margin-top: 80px;
 }
 
 h1 {
@@ -43,12 +44,6 @@ h1 {
 .go-back:hover {
   background-color: var(--color-secondary);
   color: var(--color-primary);
-}
-
-@media (max-width: 1023px) {
-  main {
-    margin-top: 80px;
-  }
 }
 
 @media (min-width: 720px) {

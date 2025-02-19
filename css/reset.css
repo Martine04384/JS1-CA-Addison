@@ -14,12 +14,7 @@ main {
   max-width: 1000px;
   width: 95%;
   margin: 0 auto;
-}
-
-@media (max-width: 1023px) {
-  main {
-    padding-top: 60px;
-  }
+  padding-top: 60px;
 }
 
 /* Text */
@@ -134,7 +129,13 @@ nav a:hover {
 }
 
 @media (min-width: 1024px) {
+  
   header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
     display: flex;
     justify-content: space-between;
     align-items: center;
