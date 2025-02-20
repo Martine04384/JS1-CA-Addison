@@ -1,10 +1,19 @@
 let cart = [];
 
 function loadCart() {
-  const storedCart = localStorage.getItem("cart");
-  if (storedCart) {
-    cart = JSON.parse(storedCart);
-  }
+  const cartContainer = document.querySelector(".order-summary");
+  const loadingMessage = document.createElement("p");
+  loadingMessage.textContent = "Loading cart...";
+  cartContainer.appendChild(loadingMessage);
+
+  try {
+    const storedCart = localStorage.getItem("cart");
+    cartContainer.removeChild(loadingMessage);
+
+    if (storedCart) {
+      cart = JSON.parse(storedCart);
+    }
+  } catch (error) {}
 }
 
 function saveCart() {

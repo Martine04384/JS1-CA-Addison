@@ -1,8 +1,12 @@
 document.addEventListener("DOMContentLoaded", () => {
   const orderContainer = document.querySelector(".order-summary");
+  const loadingMessage = document.createElement("p");
+  loadingMessage.textContent = "Loading order details...";
+  orderContainer.appendChild(loadingMessage);
 
   try {
     const orderSummary = JSON.parse(localStorage.getItem("orderSummary"));
+    orderContainer.removeChild(loadingMessage);
 
     if (!orderSummary || orderSummary.length === 0) {
       // Check if order is empty
