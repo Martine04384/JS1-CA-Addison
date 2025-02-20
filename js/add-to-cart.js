@@ -6,16 +6,14 @@ export function loadCart() {
     if (storedCart) {
       cart = JSON.parse(storedCart);
     }
-  } catch (error) {
-    console.error("Error loading cart from localStorage:", error);
-  }
+  } catch (error) {}
 }
 
 export function saveCart() {
   try {
     localStorage.setItem("cart", JSON.stringify(cart));
   } catch (error) {
-    console.error("Error saving cart to localStorage:", error);
+    alert("Error saving cart to localStorage:");
   }
 }
 
@@ -40,7 +38,7 @@ export function addToCart(id = "unknown", title = "No title", price = 0) {
     saveCart();
     showAlert(`${title} added to cart!`);
   } catch (error) {
-    console.error("Error adding item to cart:", error);
+    alert("Error adding item to cart:");
   }
 }
 
