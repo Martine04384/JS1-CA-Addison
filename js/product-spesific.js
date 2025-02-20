@@ -6,14 +6,8 @@ async function loadMovie() {
   const urlParams = new URLSearchParams(window.location.search); // Extract URL parameters
   const movieId = urlParams.get("id"); // Get the movie ID from the URL
 
-  const detailsContainer = document.querySelector(".movie-details");
-  const loadingMessage = document.createElement("p");
-  loadingMessage.textContent = "Loading movie details...";
-  detailsContainer.appendChild(loadingMessage);
-
   try {
     const movie = await getMovieById(movieId);
-    detailsContainer.removeChild(loadingMessage);
     renderMovieDetails(movie);
 
     const addToCartButton = document.querySelector(".add-to-cart");

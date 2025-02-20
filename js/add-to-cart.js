@@ -1,26 +1,22 @@
 let cart = [];
 
 export function loadCart() {
-  const cartContainer = document.querySelector(".order-summary");
-  const loadingMessage = document.createElement("p");
-  loadingMessage.textContent = "Loading cart...";
-  cartContainer.appendChild(loadingMessage);
-
   try {
     const storedCart = localStorage.getItem("cart");
-    cartContainer.removeChild(loadingMessage);
 
     if (storedCart) {
       cart = JSON.parse(storedCart);
     }
-  } catch (error) {}
+  } catch (error) {
+    alert("Error loading cart...");
+  }
 }
 
 export function saveCart() {
   try {
     localStorage.setItem("cart", JSON.stringify(cart));
   } catch (error) {
-    alert("Error saving cart to localStorage:");
+    alert("Error saving cart...");
   }
 }
 
