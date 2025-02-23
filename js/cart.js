@@ -17,7 +17,7 @@ function saveCart() {
 function displayCart() {
   const cartContainer = document.querySelector(".order-summary__details");
   cartContainer.innerHTML = "";
-  let total = 0; // Initialize total price
+  let total = 0;
 
   cart.forEach((item, index) => {
     const itemDiv = document.createElement("div");

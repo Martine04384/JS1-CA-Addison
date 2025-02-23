@@ -29,21 +29,21 @@ h1 {
 .go-back {
     display: flex;
     justify-content: center;
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
-  border-radius: 20px;
-  padding: 4px 24px;
-  font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  margin: 16px auto;
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border-radius: 20px;
+    padding: 4px 24px;
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    margin: 16px auto;
 }
 
 .go-back:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 @media (min-width: 720px) {

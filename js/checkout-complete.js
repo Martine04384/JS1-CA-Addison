@@ -5,14 +5,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const orderSummary = JSON.parse(localStorage.getItem("orderSummary"));
 
     if (!orderSummary || orderSummary.length === 0) {
-      // Check if order is empty
       const emptyMessage = document.createElement("h2");
       emptyMessage.textContent = "Your cart is empty.";
       orderContainer.appendChild(emptyMessage);
       return;
     }
 
-    let total = 0; // Initialize total price
+    let total = 0;
 
     orderSummary.forEach((item) => {
       const itemTitle = document.createElement("p");
@@ -34,9 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
     thankYou.textContent = "Thank you for your order!";
     orderContainer.appendChild(thankYou);
 
-    localStorage.removeItem("orderSummary"); // Clear order data from localStorage
+    localStorage.removeItem("orderSummary");
   } catch (error) {
-    // Catch any JSON parsing errors
     const errorMessage = document.createElement("h2");
     errorMessage.textContent = "Something went wrong loading your order.";
     orderContainer.appendChild(errorMessage);

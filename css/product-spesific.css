@@ -61,8 +61,8 @@
 }
 
 .go-back-movie:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
 }
 
 @media (min-width: 1024px) {

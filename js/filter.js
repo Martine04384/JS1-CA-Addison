@@ -4,7 +4,7 @@ const genreSelect = document.getElementById("filter-genre");
 let allMoviesList = [];
 
 export function addGenre(movies) {
-  const genres = new Set(); // A Set automatically removes duplicates
+  const genres = new Set();
   movies.forEach((movie) => genres.add(movie.genre));
 
   genreSelect.innerHTML = "<option value=''>All Genres</option>";

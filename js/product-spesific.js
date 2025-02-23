@@ -4,8 +4,8 @@ import { addToCart } from "./add-to-cart.js";
 import loader from "./loader.js"; // From Module 7 loader.
 
 async function loadMovie() {
-  const urlParams = new URLSearchParams(window.location.search); // Extract URL parameters
-  const movieId = urlParams.get("id"); // Get the movie ID from the URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const movieId = urlParams.get("id");
   loader.show();
 
   try {
