@@ -1,82 +1,50 @@
-# JS1 Course Assignment
+# JS1 Course Assignment - Square Eyes
 
-## Goal
+![Screenshot of Square Eyes homepage](./assets/screen-shoot-homepage-square-eyes.jpg)
 
-Using your new skills writing JavaScript, create an interactive online store to display
-product from an API endpoint. Use one of the three provided API URLs to display
-products in HTML and allow users to create a basket of items.
-You may use your existing cross course project code as a starting point or start a
-fresh project if this is not available. We recommend using an existing project as
-styling will not be graded, but is nice to have in the final submission
+A dynamic online movie store where users can browse movies, view product details, and manage a shopping cart.
 
-## User Stories
+## Description
 
-- As a user, I want to view a list of products on the homepage.
-- As a user, I want to filter products by category, gender or genre.
-- As a user, I want to view a single product page with more detail.
-- As a user, I want to add a product to my basket.
-- As a user, I want to remove a product from my basket.
-- As a user, I want to view a summary of my cart on the checkout page.
-- As a user, I want to view an order-confirmation screen after checking out.
+Square Eyes is an interactive online movie store built during the JavaScript 1 course at Noroff. The goal of the project was to demonstrate the practical use of JavaScript — including working with APIs, dynamically generating content, and handling user interaction.
 
-## Required Pages
+The store is powered by the Noroff Square Eyes API and allows users to browse movies, view details on individual product pages, add and remove items from a shopping cart, and complete a full checkout flow. Cart data is stored in localStorage, allowing it to persist between pages and refreshes.
 
-The following pages are required to complete this assignment.
+The website was developed using modular JavaScript, with separate files dedicated to fetching API data, rendering dynamic content, and managing cart functionality.
 
-- Home Page containing product list `/index.html`
-- Product Page showing all details of a specific product `/product/index.html`
-- Checkout Page showing all items in the basket `/checkout/index.html`
-- Confirmation Page showing a thank you message
-  `/checkout/confirmation/index.html`
+## Built With
 
-## Optional Pages
+- HTML
+- CSS
+- JavaScript
+- Noroff Square Eyes API
+- GitHub
 
-The following pages are not required to complete this assignment but help to
-improve the realism for those with extra time.
+## Installing
 
-- Category Pages (e.g. Male/Female Clothing, Movie Genres)
-- Terms and Conditions page (this may be AI generated)
-- Privacy Policy (this may be AI generated)
-- My Profile
+Clone the repository: gh repo clone Martine04384/JS1-CA-Addison
 
-## Process
+## Running
 
-- Decide if you will use your existing project, or a fresh project.
-- Open your project in GitHub Desktop and VS Code.
-- Select one of the three provided endpoints from the list below.
-- Checkout the API documentation for your chosen endpoint.
-- Work through the requirements in JavaScript one by one.
-- Test your work thoroughly and ask for peer review.
-- Offer to review two other student's work.
-- Make any final changes and submit for delivery.
+This is a static HTML/CSS/JavaScript project — no installation or build tools are required.
 
-## Resources
+To run the site locally:
 
-You have been provided with three options to choose from:
-• Rainy Days API - Outdoor clothing
-• GameHub API - Video games
-• Square Eyes API – Movies
+1. Open the project folder
+2. Open `index.html` in your browser
 
-The documentation website for each endpoint explains which options are available
-on the provided objects. These properties should be used and displayed to the user
-in your application. You are only required to select one of the endpoints but if you
-wish to implement more than one that will be accepted
+You can also view the live version here:  
+[Live site on GitHub Pages](https://martine04384.github.io/JS1-CA-Addison/)
 
-## Important Features
+## Contributing
 
-This list is a non-exhaustive list of important things to keep in mind before delivery:
-• Errors should be handled for the user, such that they are alerted when something
-goes wrong like an API call.
-• A loading indicator should be shown to the user whenever they are waiting for an
-asynchronous action to finish.
-• There should be no hardcoded product data in your final submission.
-• Although the focus on marking is on JavaScript, the site still needs to be accessible
-and usable for the user. If we cannot access functionality that has been coded, it will
-be marked as if the coding was not done.
-• Use `async` instead of `then` syntax for asynchronous actions.
-• Remove all console.log statements before delivery.
+This is a student project and is not accepting contributions, but feel free to fork the repo for learning purposes.
 
-## Delivery
+## Contact
 
-• GitHub repository with JavaScript code in the default (main/master) branch
-• Written reflection on the CA process
+[My GitHub](https://github.com/martine04384)
+
+## Acknowledgments
+
+Thanks to Noroff for the project brief and assets.
+Code reviews and feedback from instructors and peers.
