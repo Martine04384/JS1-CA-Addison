@@ -1,6 +1,6 @@
-# JS1 Course Assignment - Square Eyes
+# FED1 JavaScript 1 Course Assignment - Square Eyes
 
-![Screenshot of Square Eyes homepage](./assets/screen-shoot-homepage-square-eyes.jpg)
+![Screenshot of Square Eyes homepage](./assets/screenshot-square-eyes-homepage.jpg.jpg)
 
 A dynamic online movie store where users can browse movies, view product details, and manage a shopping cart.
 
@@ -10,10 +10,9 @@ Square Eyes is an interactive online movie store built during the JavaScript 1 c
 
 The store is powered by the Noroff Square Eyes API and allows users to browse movies, view details on individual product pages, add and remove items from a shopping cart, and complete a full checkout flow. Cart data is stored in localStorage, allowing it to persist between pages and refreshes.
 
-The website was developed using modular JavaScript, with separate files dedicated to fetching API data, rendering dynamic content, and managing cart functionality.
-
 ## Built With
 
+- Figma
 - HTML
 - CSS
 - JavaScript
@@ -26,7 +25,7 @@ Clone the repository: gh repo clone Martine04384/JS1-CA-Addison
 
 ## Running
 
-This is a static HTML/CSS/JavaScript project — no installation or build tools are required.
+This is a static project — no installation or build tools are required.
 
 To run the site locally:
 
