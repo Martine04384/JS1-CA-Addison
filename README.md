@@ -1,6 +1,6 @@
 # FED1 JavaScript 1 Course Assignment - Square Eyes
 
-![Screenshot of Square Eyes homepage](./assets/screenshot-square-eyes-homepage.jpg.jpg)
+![Screenshot of Square Eyes homepage](./assets/screenshot-square-eyes-homepage.jpg)
 
 A dynamic online movie store where users can browse movies, view product details, and manage a shopping cart.
 
