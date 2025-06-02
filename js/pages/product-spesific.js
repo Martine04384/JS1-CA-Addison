@@ -2,6 +2,7 @@ import { getMovieById } from "../api.js";
 import { renderMovieDetails } from "../render.js";
 import { addToCart } from "../utils/add-to-cart.js";
 import loader from "../utils/loader.js"; // From Module 7 loader.
+import { showMessage } from "../utils/message.js";
 
 async function loadMovie() {
   const urlParams = new URLSearchParams(window.location.search);
@@ -19,7 +20,9 @@ async function loadMovie() {
       });
     }
   } catch (error) {
-    alert("Movie not found. Please try again later.");
+    // Updated code with error messages.
+    console.error("Movie not found:", error);
+    showMessage(error.message);
   }
 }
 

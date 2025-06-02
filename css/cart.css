@@ -48,6 +48,10 @@ fieldset {
   gap: 10px; 
 }
 
+.cart-row {
+  border-bottom: solid 2px var(--color-primary);
+}
+
 .order-summary__details p {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 1rem;
@@ -82,7 +86,6 @@ fieldset {
 .order-summary__details div:last-child {
   font-weight: bold;
   font-size: 1.5rem;
-  border-top: 2px solid var(--color-primary);
   margin-top: 20px;
   padding-top: 10px;
   display: grid;
@@ -93,4 +96,19 @@ fieldset {
 .submit-order {
   width: 100%;
   padding: 4px 0;
+}
+
+/* Updated styling after adding counters*/
+@media (max-width: 600px) {
+  .order-summary__details .cart-row  {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+  .quantity-buttons{
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+  }
 }

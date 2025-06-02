@@ -70,6 +70,10 @@
   padding: 0px;
 }
 
+.card:hover {
+  transform: scale(1.03);
+}
+
 .card-image-container {
   height: 445px;
   width: 300px;

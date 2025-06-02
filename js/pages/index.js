@@ -3,6 +3,7 @@ import { renderMovies } from "../render.js";
 import { addGenre, activateGenreFilter } from "../utils/filter.js";
 import { addToCart } from "../utils/add-to-cart.js";
 import loader from "../utils/loader.js"; // From Module 7 loader.
+import { showMessage } from "../utils/message.js";
 
 async function movies() {
   loader.show();
@@ -23,7 +24,9 @@ async function movies() {
       }
     });
   } catch (error) {
-    alert("Could not load movies");
+    // Updated code with error messages.
+    console.error("Could not load movies:", error);
+    showMessage(error.message);
   }
 }
 

@@ -1,18 +1,5 @@
 import { cart, loadCart, saveCart } from "./save-and-load-cart.js";
-
-function showAlert(message, duration = 1000) {
-  const alertBox = document.getElementById("customAlert");
-  alertBox.textContent = message;
-  alertBox.style.display = "block";
-
-  setTimeout(() => {
-    alertBox.style.opacity = "0";
-    setTimeout(() => {
-      alertBox.style.display = "none";
-      alertBox.style.opacity = "1";
-    }, 300);
-  }, duration);
-}
+import { showMessage } from "./message.js";
 
 export function addToCart(id = "unknown", title = "No title", price = 0) {
   try {
@@ -27,9 +14,11 @@ export function addToCart(id = "unknown", title = "No title", price = 0) {
       cart.push(newItem);
     }
     saveCart();
-    showAlert(`${title} added to cart!`);
+    //Updated code with custom messages for alert and error.
+    showMessage(`${title} added to cart!`);
   } catch (error) {
-    showError("Error adding item to cart");
+    console.error("Error adding item to cart:", error);
+    showMessage(error.message);
   }
 }
 

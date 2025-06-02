@@ -7,6 +7,7 @@ function displayCart() {
 
   cart.forEach((item, index) => {
     const itemDiv = document.createElement("div");
+    itemDiv.classList.add("cart-row");
 
     const title = document.createElement("p");
     title.textContent = item.title;

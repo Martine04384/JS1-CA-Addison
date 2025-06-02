@@ -1,3 +1,5 @@
+import { showMessage } from "../utils/message.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   const orderContainer = document.querySelector(".order-summary");
 
@@ -40,8 +42,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.removeItem("orderSummary");
   } catch (error) {
-    const errorMessage = document.createElement("h2");
-    errorMessage.textContent = "Something went wrong loading your order.";
-    orderContainer.appendChild(errorMessage);
+    // Updated code with error messages.
+    console.error("Error loading movie:", error);
+    showMessage(error.message);
   }
 });
