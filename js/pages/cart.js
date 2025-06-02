@@ -1,18 +1,4 @@
-let cart = [];
-
-function loadCart() {
-  try {
-    const storedCart = localStorage.getItem("cart");
-
-    if (storedCart) {
-      cart = JSON.parse(storedCart);
-    }
-  } catch (error) {}
-}
-
-function saveCart() {
-  localStorage.setItem("cart", JSON.stringify(cart));
-}
+import { cart, loadCart, saveCart } from "../utils/save-and-load-cart.js";
 
 function displayCart() {
   const cartContainer = document.querySelector(".order-summary__details");

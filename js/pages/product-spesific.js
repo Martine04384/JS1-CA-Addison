@@ -1,7 +1,7 @@
-import { getMovieById } from "./api.js";
-import { renderMovieDetails } from "./render.js";
-import { addToCart } from "./add-to-cart.js";
-import loader from "./loader.js"; // From Module 7 loader.
+import { getMovieById } from "../api.js";
+import { renderMovieDetails } from "../render.js";
+import { addToCart } from "../utils/add-to-cart.js";
+import loader from "../utils/loader.js"; // From Module 7 loader.
 
 async function loadMovie() {
   const urlParams = new URLSearchParams(window.location.search);

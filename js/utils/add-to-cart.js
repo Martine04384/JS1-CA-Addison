@@ -1,24 +1,4 @@
-let cart = [];
-
-export function loadCart() {
-  try {
-    const storedCart = localStorage.getItem("cart");
-
-    if (storedCart) {
-      cart = JSON.parse(storedCart);
-    }
-  } catch (error) {
-    alert("Error loading cart...");
-  }
-}
-
-export function saveCart() {
-  try {
-    localStorage.setItem("cart", JSON.stringify(cart));
-  } catch (error) {
-    alert("Error saving cart...");
-  }
-}
+import { cart, loadCart, saveCart } from "./save-and-load-cart.js";
 
 function showAlert(message, duration = 1000) {
   const alertBox = document.getElementById("customAlert");

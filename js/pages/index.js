@@ -1,8 +1,8 @@
-import { getMovies } from "./api.js";
-import { renderMovies } from "./render.js";
-import { addGenre, activateGenreFilter } from "./filter.js";
-import { addToCart } from "./add-to-cart.js";
-import loader from "./loader.js"; // From Module 7 loader.
+import { getMovies } from "../api.js";
+import { renderMovies } from "../render.js";
+import { addGenre, activateGenreFilter } from "../utils/filter.js";
+import { addToCart } from "../utils/add-to-cart.js";
+import loader from "../utils/loader.js"; // From Module 7 loader.
 
 async function movies() {
   loader.show();

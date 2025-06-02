@@ -1,4 +1,4 @@
-import { renderMovies } from "./render.js";
+import { renderMovies } from "../render.js";
 
 const genreSelect = document.getElementById("filter-genre");
 let allMoviesList = [];
