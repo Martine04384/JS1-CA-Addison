@@ -160,6 +160,7 @@ nav a:hover {
 
 /* CTA buttons*/
 .cta__button {
+  all: unset;
   background-color: var(--color-primary);
   color: var(--color-secondary);
   border-radius: 20px;
@@ -180,7 +181,7 @@ nav a:hover {
 .add-to-cart {
   background-color: var(--color-primary);
   color: var(--color-secondary);
-  border-radius: 20cap;
+  border-radius: 20px;
   border: none;
   padding: 4px 24px;
   font-size: 1rem;
@@ -205,6 +206,10 @@ nav a:hover {
 /* Forms */
 .form__input {
   display: block;
+}
+
+.helper-text {
+  font-size: 1rem;
 }
 
 /* footer */

@@ -35,7 +35,8 @@
             </section>
             <section class="billing">
                 <h2>Contact and billing details</h2>
-                <form class="billing__details">
+                <!--Updated code with id for form validation-->
+                <form class="billing__details" id="checkout-form">
                     <fieldset>
                         <legend>Contact details</legend>
                         <div>
@@ -45,6 +46,7 @@
                         <div>
                             <label for="email">Your email</label>
                             <input type="email" name="email" id="email" class="form__input" required>
+                            <small class="helper-text">Email must include @ and .com</small>
                         </div>
                     </fieldset>
                     <fieldset>
@@ -56,10 +58,12 @@
                         <div>
                             <label for="streetnumber">Streetnumber</label>
                             <input type="number" name="streetnumber" id="streetnumber" class="form__input" required>
+                            <small class="helper-text">Only numbers accepted in this field</small>
                         </div>
                         <div>
                             <label for="postalcode">Postal code</label>
                             <input type="number" name="postalcode" id="postalcode" class="form__input" required>
+                            <small class="helper-text">Only numbers accepted in this field</small>
                         </div>
                         <div>
                             <label for="city">City</label>
@@ -75,18 +79,24 @@
                         <div>
                             <label for="cardnumber">Cardnumber</label>
                             <input type="number" name="cardnumber" id="cardnumber" class="form__input" required>
+                            <small class="helper-text">Card number must be between 12 and 19 digits.</small>
                         </div>
                         <div>
                             <label for="expiry">Expiry</label>
                             <input type="number" name="expiry" id="expiry" class="form__input" required>
+                            <small class="helper-text">Format mm/yy</small>
                         </div>
                         <div>
                             <label for="cvc">CVC</label>
                             <input type="number" name="cvc" id="cvc" class="form__input" required>
+                            <small class="helper-text">CVC must be 3 digits.</small>
                         </div>
                     </fieldset>
+                    <!--Updated code with submit button-->
+                    <button type="submit" class="cta__button submit-order">Submit order
+                    </button>
                 </form>
-                <a href="checkout-complete.html" class="cta__button submit-order">Submit order</a>
+
             </section>
         </div>
     </main>

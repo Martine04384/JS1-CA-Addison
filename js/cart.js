@@ -105,9 +105,76 @@ function removeFromCart(index) {
   displayCart();
 }
 
-document.querySelector(".submit-order").addEventListener("click", () => {
+/* Updated code with form validation */
+const form = document.getElementById("checkout-form");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value.trim();
+  const email = document.getElementById("email").value.trim();
+  const address = document.getElementById("adress").value.trim();
+  const streetNumber = document.getElementById("streetnumber").value.trim();
+  const postalCode = document.getElementById("postalcode").value.trim();
+  const city = document.getElementById("city").value.trim();
+  const country = document.getElementById("country").value.trim();
+  const cardNumber = document.getElementById("cardnumber").value.trim();
+  const expiry = document.getElementById("expiry").value.trim();
+  const cvc = document.getElementById("cvc").value.trim();
+
+  if (name.length < 2) {
+    alert("Please enter your full name.");
+    return;
+  }
+
+  if (!email.includes("@") || !email.includes(".com")) {
+    alert("Please enter a valid email.");
+    return;
+  }
+
+  if (address.length < 3) {
+    alert("Please enter a valid street name.");
+    return;
+  }
+
+  if (streetNumber === "" || isNaN(streetNumber)) {
+    alert("Please enter a valid street number.");
+    return;
+  }
+
+  if (postalCode === "" || isNaN(postalCode)) {
+    alert("Please enter a valid postal code.");
+    return;
+  }
+
+  if (city.length < 2) {
+    alert("Please enter a valid city.");
+    return;
+  }
+
+  if (country.length < 2) {
+    alert("Please enter a valid country.");
+    return;
+  }
+
+  if (cardNumber.length < 12 || cardNumber.length > 19) {
+    alert("Card number must be between 12 and 19 digits.");
+    return;
+  }
+
+  if (cvc.length !== 3 || isNaN(cvc)) {
+    alert("CVC must be exactly 3 digits.");
+    return;
+  }
+
+  if (expiry.length < 4 || isNaN(expiry)) {
+    alert("Please enter a valid expiry date.");
+    return;
+  }
+
   localStorage.setItem("orderSummary", JSON.stringify(cart));
   localStorage.removeItem("cart");
+  window.location.href = "checkout-complete.html";
 });
 
 loadCart();
