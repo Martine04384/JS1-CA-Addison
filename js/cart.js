@@ -25,8 +25,29 @@ function displayCart() {
     const title = document.createElement("p");
     title.textContent = item.title;
 
+    // Updated code with quantity buttons
+    const quantityButtons = document.createElement("div");
+    quantityButtons.classList.add("quantity-buttons");
+
+    const decreaseButton = document.createElement("button");
+    decreaseButton.textContent = "-";
+    decreaseButton.addEventListener("click", () => decreaseQuantity(index));
+
+    const quantity = document.createElement("p");
+    quantity.textContent = item.quantity;
+
+    const increaseButton = document.createElement("button");
+    increaseButton.textContent = "+";
+    increaseButton.addEventListener("click", () => increaseQuantity(index));
+
+    quantityButtons.appendChild(decreaseButton);
+    quantityButtons.appendChild(quantity);
+    quantityButtons.appendChild(increaseButton);
+
     const price = document.createElement("p");
-    price.textContent = `$${parseFloat(item.price).toFixed(2)}`;
+    // Updated code with total price calculated per movie
+    const itemTotal = (item.price * item.quantity).toFixed(2);
+    price.textContent = `$${itemTotal}`;
 
     const removeButton = document.createElement("button");
     removeButton.textContent = "Remove";
@@ -35,12 +56,15 @@ function displayCart() {
     removeButton.addEventListener("click", () => removeFromCart(index));
 
     itemDiv.appendChild(title);
+    // Updated code with quantity buttons
+    itemDiv.appendChild(quantityButtons);
     itemDiv.appendChild(price);
     itemDiv.appendChild(removeButton);
 
     cartContainer.appendChild(itemDiv);
 
-    total += parseFloat(item.price);
+    // Updated code with total price calculated per order
+    total = total + item.price * item.quantity;
   });
 
   const totalDiv = document.createElement("div");
@@ -54,8 +78,29 @@ function displayCart() {
   cartContainer.appendChild(totalDiv);
 }
 
+// Updated code with quantity buttons - function for the buttons
+function increaseQuantity(index) {
+  let currentQuantity = cart[index].quantity;
+  let newQuantity = currentQuantity + 1;
+  cart[index].quantity = newQuantity;
+  saveCart();
+  displayCart();
+}
+
+function decreaseQuantity(index) {
+  let currentQuantity = cart[index].quantity;
+  if (currentQuantity > 1) {
+    let newQuantity = currentQuantity - 1;
+    cart[index].quantity = newQuantity;
+  } else {
+    cart.splice(index, 1);
+  }
+  saveCart();
+  displayCart();
+}
+
 function removeFromCart(index) {
-  cart.splice(index, 1); // Remove the item at the specified index
+  cart.splice(index, 1); // Remove the 1 item at the specified index
   saveCart();
   displayCart();
 }

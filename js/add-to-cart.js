@@ -36,12 +36,20 @@ function showAlert(message, duration = 1000) {
 
 export function addToCart(id = "unknown", title = "No title", price = 0) {
   try {
-    const item = { id, title, price };
-    cart.push(item);
+    // Updated code with quantity
+    // Used school example source: https://mollify.noroff.dev/content/feu1/javascript-1/module-3/array-methods?nav=programme
+    const existingItem = cart.find((movie) => movie.id === id);
+
+    if (existingItem) {
+      existingItem.quantity += 1;
+    } else {
+      const newItem = { id, title, price, quantity: 1 };
+      cart.push(newItem);
+    }
     saveCart();
     showAlert(`${title} added to cart!`);
   } catch (error) {
-    alert("Error adding item to cart:");
+    showError("Error adding item to cart");
   }
 }
 

@@ -16,13 +16,18 @@ document.addEventListener("DOMContentLoaded", () => {
     orderSummary.forEach((item) => {
       const itemTitle = document.createElement("p");
       itemTitle.textContent = item.title;
+      // Updated code added quantity after title
+      itemTitle.textContent = `${item.title} (x${item.quantity})`;
       const itemPrice = document.createElement("p");
-      itemPrice.textContent = `$${parseFloat(item.price).toFixed(2)}`;
+      // Updated code with total price calculated per movie
+      const itemTotal = (item.price * item.quantity).toFixed(2);
+      itemPrice.textContent = `$${itemTotal}`;
 
       orderContainer.appendChild(itemTitle);
       orderContainer.appendChild(itemPrice);
 
-      total += parseFloat(item.price);
+      // Updated code with total price calculated per order
+      total = total + item.price * item.quantity;
     });
 
     const totalContainer = document.createElement("h3");
