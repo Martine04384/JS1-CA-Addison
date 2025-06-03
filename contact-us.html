@@ -2,12 +2,12 @@
 <html lang="en">
 
 <head>
-    <title>Square Eyes</title>
+    <title>Contact us, Square Eyes</title>
     <meta charset="UTF-8">
     <meta name="description"
-        Content="Square eyes an online video cinema made to connect film lovers with high-quality online movies.">
+        Content="How to contact Square Eyes on in contact form, on facebook, instagram, phone oe email.">
     <meta name="viewport" Content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/contact-us.css">
     <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/favicon.ico">
     <script src="https://kit.fontawesome.com/87671af21f.js" crossorigin="anonymous"></script>
 </head>
@@ -21,30 +21,31 @@
                 class="fas fa-bars fa"></i></label>
         <input type="checkbox" name="menue-checkbox" id="menue-checkbox">
         <nav>
-            <a href="index.html" class="nav-active">Home</a>
+            <a href="index.html">Home</a>
             <a href="about-us.html">About</a>
-            <a href="contact-us.html">Contact</a>
+            <a href="contact-us.html" class="nav-active">Contact</a>
             <a href="cart.html" aria-label="View Cart"><i class="fas fa-regular fa-cart-shopping"></i></a>
         </nav>
     </header>
-    <main>
-        <section class="welcome">
-            <img src="assets/square-eyes-logo.png" alt="Square Eyes logo with caption connecting film lovers"
-                class="logo__image">
-            <div class="welcome-content">
-                <h1>Movie Library</h1>
-            </div>
+    <main class="contact">
+        <section>
+            <h1>Contact Us</h1>
+            <p>Send us a message or give us a call if you have feedback or questions!</p>
+            <p>Telephone: +47 11 22 33 44</p>
+            <p>Email: thisisanemail@email.com</p>
         </section>
-        <div class="filter">
-            <label for="filter-genre">Choose a Movie Genre</label>
-            <select id="filter-genre">
-                <option value="">All Genres</option>
-            </select>
-        </div>
-        <div class="movie">
-            <div class="loader">Loading movies...</div>
-            <div class="movie__imagelist"></div>
-        </div>
+        <form class="contact__form">
+            <fieldset>
+                <legend>Contact form</legend>
+                <label for="name">Your name</label>
+                <input type="text" name="name" id="name" class="form__input" required>
+                <label for="email">Your email</label>
+                <input type="email" name="email" id="email" class="form__input" required>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5" cols="30" class="form__input" required></textarea>
+            </fieldset>
+            <button type="submit" class="cta__button">Send message</button>
+        </form>
     </main>
     <footer>
         <p>Contact us on:</p>
@@ -71,7 +72,6 @@
         <p id="dialog-message"></p>
         <button id="close-dialog">Close</button>
     </dialog>
-    <script type="module" src="./js/pages/index.js"></script>
 </body>
 
 </html>

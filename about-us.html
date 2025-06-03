@@ -2,12 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>Square Eyes</title>
+    <title>About, Square Eyes</title>
     <meta charset="UTF-8">
-    <meta name="description"
-        Content="Square eyes an online video cinema made to connect film lovers with high-quality online movies.">
+    <meta name="description" Content="About Square eyes, an online cinema with premium high-quality movies.">
     <meta name="viewport" Content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/about-us.css">
     <link rel="icon" type="image/x-icon" sizes="16x16" href="assets/favicon.ico">
     <script src="https://kit.fontawesome.com/87671af21f.js" crossorigin="anonymous"></script>
 </head>
@@ -21,31 +20,32 @@
                 class="fas fa-bars fa"></i></label>
         <input type="checkbox" name="menue-checkbox" id="menue-checkbox">
         <nav>
-            <a href="index.html" class="nav-active">Home</a>
-            <a href="about-us.html">About</a>
+            <a href="index.html">Home</a>
+            <a href="about-us.html" class="nav-active">About</a>
             <a href="contact-us.html">Contact</a>
             <a href="cart.html" aria-label="View Cart"><i class="fas fa-regular fa-cart-shopping"></i></a>
         </nav>
     </header>
+
     <main>
-        <section class="welcome">
-            <img src="assets/square-eyes-logo.png" alt="Square Eyes logo with caption connecting film lovers"
-                class="logo__image">
-            <div class="welcome-content">
-                <h1>Movie Library</h1>
+        <h1>About Us</h1>
+        <section class="about">
+            <div class="about__image">
+                <img src="assets/square-eyes-logo.png" alt="Square Eyes logo with caption connecting film lovers"
+                    class="about__image">
+            </div>
+            <div class="about__text">
+                <h2>Welcome to Square Eyes!</h2>
+                <p>We love a good movie and want to bring that cinema feeling home to you.</p>
+                <p>We provide a premium video streaming experience where you can purchase high-quality films directly
+                    from filmmakers. With our carefully collections, you can discover hidden gems and support small
+                    filmmakers. Every film you buy is available to watch instantly, allowing you to dive into the world
+                    of cinema whenever and wherever you want.</p>
             </div>
         </section>
-        <div class="filter">
-            <label for="filter-genre">Choose a Movie Genre</label>
-            <select id="filter-genre">
-                <option value="">All Genres</option>
-            </select>
-        </div>
-        <div class="movie">
-            <div class="loader">Loading movies...</div>
-            <div class="movie__imagelist"></div>
-        </div>
+        <a href="./products.html" class="cta__button go-back-about">Go to Movie Library</a>
     </main>
+
     <footer>
         <p>Contact us on:</p>
         <a href="https://www.facebook.com" target="_blank" aria-label="Facebook icon that links to Facebook"
@@ -66,12 +66,6 @@
         </a>
         <p>Copyright &copy;</p>
     </footer>
-    <!--User feedback global-->
-    <dialog id="dialog">
-        <p id="dialog-message"></p>
-        <button id="close-dialog">Close</button>
-    </dialog>
-    <script type="module" src="./js/pages/index.js"></script>
 </body>
 
 </html>
