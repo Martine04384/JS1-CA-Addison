@@ -45,12 +45,20 @@ textarea {
 }
 
 .send {
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
     display: flex;
-    justify-content: center;
+    margin: 20px auto;
+}
+
+.send:hover {
+    background-color: var(--color-primary);
+    color: var(--color-secondary);
+    border: solid 2px var(--color-secondary);
 }
 
 @media (min-width: 720px) {
     .contact__form {
-        padding: 40px;
+        padding: 40px 40px 0 40px;
     }
 }
