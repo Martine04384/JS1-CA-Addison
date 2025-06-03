@@ -9,13 +9,22 @@
 }
   
 .about__image {
+  height: 400px;
+  max-width: 719px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+
+.about__image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
   
 .about__text {
   background-color: var(--color-secondary);
   box-sizing: border-box;
-  border-radius: 20px;
+  border-radius: 0px;
   padding: 16px;
   margin: 16px auto;
 }
