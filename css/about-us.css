@@ -24,30 +24,14 @@
 .about__text {
   background-color: var(--color-secondary);
   box-sizing: border-box;
-  border-radius: 0px;
   padding: 16px;
   margin: 16px auto;
 }
 
 .go-back-about {
   display: flex;
-  flex-direction: row;
   justify-content: center;
-  background-color: var(--color-primary);
-  color: var(--color-secondary);
-  border-radius: 20cap;
-  padding: 4px 24px;
-  font-size: 1rem;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  font-weight: bold;
-  text-align: center;
-  text-decoration: none;
-  margin: 16px auto;
-}
-
-.go-back-about:hover {
-  background-color: var(--color-secondary);
-  color: var(--color-primary);
+  margin: 20px auto;
 }
 
 @media (max-width: 719px) {
