@@ -3,10 +3,6 @@
 
 /* Cart*/
 
-main {
-  min-width: 350px;
-}
-
 .order-summary__details, .billing__details {
   background-color: var(--color-secondary);
   color: var(--color-primary);

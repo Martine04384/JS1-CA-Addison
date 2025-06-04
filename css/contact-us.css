@@ -2,6 +2,7 @@
 @import url("./variables.css");
 
 /* Contact us*/
+
 .contact {
     display: flex;
     flex-direction:column;
@@ -13,6 +14,11 @@
     max-width: 1000px;
     width: 100%;
     margin: 0 auto;
+}
+
+.contact__text {
+    background-color: var(--color-secondary);
+    padding: 20px;
 }
 
 .contact__form {
