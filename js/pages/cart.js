@@ -1,3 +1,4 @@
+import { showMessage } from "../utils/message.js";
 import { cart, loadCart, saveCart } from "../utils/save-and-load-cart.js";
 
 function displayCart() {
@@ -110,52 +111,52 @@ form.addEventListener("submit", (event) => {
   const cvc = document.getElementById("cvc").value.trim();
 
   if (name.length < 2) {
-    alert("Please enter your full name.");
+    showMessage("Please enter your full name.");
     return;
   }
 
   if (!email.includes("@") || !email.includes(".com")) {
-    alert("Please enter a valid email.");
+    showMessage("Please enter a valid email.");
     return;
   }
 
   if (address.length < 3) {
-    alert("Please enter a valid street name.");
+    showMessage("Please enter a valid street name.");
     return;
   }
 
   if (streetNumber === "" || isNaN(streetNumber)) {
-    alert("Please enter a valid street number.");
+    showMessage("Please enter a valid street number.");
     return;
   }
 
   if (postalCode === "" || isNaN(postalCode)) {
-    alert("Please enter a valid postal code.");
+    showMessage("Please enter a valid postal code.");
     return;
   }
 
   if (city.length < 2) {
-    alert("Please enter a valid city.");
+    showMessage("Please enter a valid city.");
     return;
   }
 
   if (country.length < 2) {
-    alert("Please enter a valid country.");
+    showMessage("Please enter a valid country.");
     return;
   }
 
   if (cardNumber.length < 12 || cardNumber.length > 19) {
-    alert("Card number must be between 12 and 19 digits.");
+    showMessage("Card number must be between 12 and 19 digits.");
     return;
   }
 
   if (cvc.length !== 3 || isNaN(cvc)) {
-    alert("CVC must be exactly 3 digits.");
+    showMessage("CVC must be exactly 3 digits.");
     return;
   }
 
   if (expiry.length < 4 || isNaN(expiry)) {
-    alert("Please enter a valid expiry date.");
+    showMessage("Please enter a valid expiry date.");
     return;
   }
 

@@ -3,7 +3,8 @@
 
 /* Cart*/
 
-.order-summary__details, .billing__details {
+.order-summary__details,
+.billing__details {
   background-color: var(--color-secondary);
   color: var(--color-primary);
   box-sizing: border-box;
@@ -16,11 +17,11 @@
 
 .order-summary__details div {
   display: grid;
-  grid-template-columns: 1fr auto auto auto; 
+  grid-template-columns: 1fr auto auto auto;
   align-items: baseline;
   margin-bottom: 10px;
   padding: 20px;
-  gap: 10px; 
+  gap: 10px;
 }
 
 .cart-row {
@@ -69,17 +70,18 @@
   justify-content: space-between;
 }
 
-fieldset div{
+fieldset div {
   padding: 16px 0;
 }
-  
-input, 
-select, 
-textarea{
+
+input,
+select,
+textarea {
   border: 1px solid var(--color-primary);
   color: var(--color-primary);
   font-size: larger;
-  font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua, Georgia, serif; 
+  font-family: Palatino, Palatino Linotype, Palatino LT STD, Book Antiqua,
+    Georgia, serif;
   margin: 0;
   padding: 16px;
   width: 100%;
@@ -88,6 +90,13 @@ textarea{
 
 fieldset {
   padding: 24px;
+}
+
+#cvc,
+#expiry,
+#streetnumber,
+#postalcode {
+  width: 50%;
 }
 
 .submit-order {
@@ -101,13 +110,13 @@ fieldset {
 
 /* Updated styling after adding counters*/
 @media (max-width: 600px) {
-  .order-summary__details .cart-row  {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
+  .order-summary__details .cart-row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
 
-  .quantity-buttons{
+  .quantity-buttons {
     display: flex;
     justify-content: center;
     gap: 8px;
