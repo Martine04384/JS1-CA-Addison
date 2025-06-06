@@ -6,7 +6,6 @@ export async function getMovies() {
     const data = await response.json();
     return data.data;
   } catch (error) {
-    // Updated code with error message to console.
     console.error("Could not load movies:", error);
   }
 }
@@ -17,7 +16,6 @@ export async function getMovieById(id) {
     const data = await response.json();
     return data.data;
   } catch (error) {
-    // Updated code with error message to console.
     console.error("Could not load movie:", error);
   }
 }

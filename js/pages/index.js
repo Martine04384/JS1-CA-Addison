@@ -24,7 +24,6 @@ async function movies() {
       }
     });
   } catch (error) {
-    // Updated code with error messages.
     console.error("Could not load movies:", error);
     showMessage(error.message);
   }

@@ -20,7 +20,6 @@ async function loadMovie() {
       });
     }
   } catch (error) {
-    // Updated code with error messages.
     console.error("Movie not found:", error);
     showMessage(error.message);
   }

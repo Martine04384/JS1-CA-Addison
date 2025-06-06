@@ -18,17 +18,14 @@ document.addEventListener("DOMContentLoaded", () => {
     orderSummary.forEach((item) => {
       const itemTitle = document.createElement("p");
       itemTitle.textContent = item.title;
-      // Updated code added quantity after title
       itemTitle.textContent = `${item.title} (x${item.quantity})`;
       const itemPrice = document.createElement("p");
-      // Updated code with total price calculated per movie
       const itemTotal = (item.price * item.quantity).toFixed(2);
       itemPrice.textContent = `$${itemTotal}`;
 
       orderContainer.appendChild(itemTitle);
       orderContainer.appendChild(itemPrice);
 
-      // Updated code with total price calculated per order
       total = total + item.price * item.quantity;
     });
 
@@ -42,7 +39,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     localStorage.removeItem("orderSummary");
   } catch (error) {
-    // Updated code with error messages.
     console.error("Error loading movie:", error);
     showMessage(error.message);
   }

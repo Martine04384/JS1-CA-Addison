@@ -108,7 +108,6 @@ fieldset {
   border: 2px solid var(--color-primary);
 }
 
-/* Updated styling after adding counters*/
 @media (max-width: 600px) {
   .order-summary__details .cart-row {
     display: flex;
